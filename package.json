@@ -2,9 +2,10 @@
   "name": "master-control-panel",
   "version": "1.0.0",
   "description": "A raspberry pi based remote control and thermostat AND MAYBE MORE",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "electron ."
+    "start": "tsc && cp index.html dist/index.html && electron dist/",
+    "build": "tsc"
   },
   "repository": "https://github.com/dxprog/master-control-panel.git",
   "keywords": [
@@ -14,6 +15,7 @@
   "author": "Matt Hackmann <matt@dxprog.com>",
   "license": "WTFPL",
   "devDependencies": {
-    "electron": "^2.0.0"
+    "electron": "^2.0.0",
+    "typescript": "^2.9.1"
   }
 }
