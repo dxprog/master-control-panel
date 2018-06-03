@@ -9,11 +9,13 @@ function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
     width: 800,
-    height: 480
+    height: 480,
+    fullscreen: true,
+    kiosk: true
   });
 
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html');
+  mainWindow.loadFile('static/index.html');
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()

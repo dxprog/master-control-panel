@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Source Sans Pro';
+  font-size: 62.5%;
+  background-color: #b2172b;
+}
+
+.current-conditions-header {
+  font-size: 4.8rem;
+  text-align: center;
+  color: #fff;
+  padding-top: 5rem;
+}
+
+.current-conditions__label {
+  display: none;
+}
+
+.current-conditions__temperature {
+  font-size: 7.2rem;
+  text-align: center;
+  color: #fff;
+}

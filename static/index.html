@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1 class="current-conditions-header">Currently</h1>
+    <dl class="current-conditions">
+      <dt class="current-conditions__label">Conditions</dt>
+      <dd class="current-conditions__condition"></dd>
+      <dt class="current-conditions__label">Temperature</dt>
+      <dd class="current-conditions__temperature" id="currentTemp"></dd>
+    </dl>
+    <script>
+      require('../dist/ui/renderer.js');
+    </script>
+  </body>
+</html>

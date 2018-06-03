@@ -10,10 +10,11 @@
     "jsx": "react",
     "moduleResolution": "node",
     "module": "commonjs",
-    "typeRoots": [ "node_modules/@types" ]
+    "typeRoots": [ "node_modules/@types", "./typings" ]
   },
   "files": [
-    "./src/index.ts",
-    "./src/renderer.ts"
+    "./src/ui/index.ts",
+    "./src/ui/renderer.ts",
+    "./src/service/index.ts"
   ]
 }
