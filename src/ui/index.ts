@@ -11,7 +11,8 @@ function createWindow () {
     width: 800,
     height: 480,
     fullscreen: true,
-    kiosk: true
+    kiosk: true,
+    autoHideMenuBar: true
   });
 
   // and load the index.html of the app.
