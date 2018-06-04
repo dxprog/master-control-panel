@@ -10,17 +10,37 @@ body {
 }
 
 .current-conditions-header {
-  font-size: 4.8rem;
+  font-size: 2.4rem;
   text-align: center;
   color: #fff;
-  padding-top: 5rem;
+  padding-top: 2.5rem;
 }
 
-.current-conditions__label {
-  display: none;
+.weather-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
-.current-conditions__temperature {
+.weather-info__conditions {
+  width: 256px;
+}
+
+.weather-info__text {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #fff;
+}
+
+.weather-info__icon {
+  width: 256px;
+  height: 256px;
+  display: block;
+  margin: 0 auto;
+}
+
+.weather-info__temperature {
   font-size: 7.2rem;
   text-align: center;
   color: #fff;

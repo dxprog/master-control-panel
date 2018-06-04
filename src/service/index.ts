@@ -1,16 +1,22 @@
 import * as express from 'express';
-import * as sensor from 'node-dht-sensor';
+import * as https from 'https';
+
+import { readConditions } from './services/dht11';
+import { getCurrentConditions } from './services/nws';
+
+const WEATHER_STATION = 'KSFO';
 
 const app = express();
 
-app.get('/conditions', (req, res) => {
-  sensor.read(11, 4, (err: Error, temperature?: number, humidity?: number) => {
-    if (!err) {
-      res.json({
-        temperature,
-        humidity
-      });
-    }
+app.get('/conditions', async (req, res) => {
+  const [ sensorConditions, nwsConditions ] = await Promise.all([
+    readConditions(),
+    getCurrentConditions(WEATHER_STATION)
+  ]);
+
+  res.json({
+    sensor: sensorConditions,
+    nws: nwsConditions
   });
 });
 

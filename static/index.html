@@ -8,12 +8,13 @@
   </head>
   <body>
     <h1 class="current-conditions-header">Currently</h1>
-    <dl class="current-conditions">
-      <dt class="current-conditions__label">Conditions</dt>
-      <dd class="current-conditions__condition"></dd>
-      <dt class="current-conditions__label">Temperature</dt>
-      <dd class="current-conditions__temperature" id="currentTemp"></dd>
-    </dl>
+    <div class="weather-info">
+      <div class="weather-info__conditions">
+        <img id="currentConditionIcon" class="weather-info__icon" />
+        <p id="currentConditionText" class="weather-info__text"></p>
+      </div>
+      <p class="weather-info__temperature" id="currentTemp"></p>
+    </div>
     <script>
       require('../dist/ui/renderer.js');
     </script>
